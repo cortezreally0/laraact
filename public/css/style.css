@@ -1,0 +1,789 @@
+:root {
+    --color-navy: #001e2b;
+    --color-green: #00ed64;
+    --color-green-hover: #68ff5b;
+    --color-gray: #8899a6;
+    --color-semi-white: #e6ffe9;
+}
+
+body {
+    background-color: var(--color-navy);
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: white;
+}
+/* nav */
+.navbar-glass {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #cbd5e0 !important;
+}
+.nav-link:hover {
+    color: var(--color-green) !important;
+}
+
+.nav-link.active {
+    color: var(--color-green) !important;
+}
+
+/* Hero */
+.hero-section {
+    padding: 100px 0;
+    background-image:
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+.main-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00edff, #00e676);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    max-width: 600px;
+    font-size: 1.25rem;
+}
+
+.badge-custom {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.cta-container {
+    max-width: 450px;
+}
+
+.btn-signin-green {
+    background-color: var(--color-green);
+    color: var(--color-navy);
+    border-radius: 20px;
+}
+.btn-signin-green:hover {
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
+}
+
+.btn-dark-circle {
+    background: #3d4f58;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.faq-text {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+}
+
+/* Jumbotron */
+.jumbotron-custom {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Card */
+.app-card {
+    background: #001e2b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.app-card:hover {
+    border-color: var(--color-green);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 237, 100, 0.1);
+}
+
+.icon-box {
+    font-size: 1.5rem;
+    color: var(--color-green);
+    background: rgba(0, 237, 100, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.btn-color-green {
+    background-color: var(--color-green);
+    color: var(--color-navy);
+    border-radius: 20px;
+}
+.btn-color-green:hover {
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
+}
+
+.btn-outline-light {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-semi-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.btn-outline-light:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+.footer-simple {
+    background-color: #00121a;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-nav-link {
+    color: var(--color-gray) !important;
+    font-size: 0.95rem;
+    padding: 0 15px !important;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+    color: var(--color-green) !important;
+}
+
+.text-muted {
+    color: var(--color-semi-white) !important;
+    opacity: 1;
+    letter-spacing: 0.5px;
+}
+
+/* login */
+.login-section {
+    min-height: 80vh;
+    padding: 60px 0;
+    background-image:
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+
+.login-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-green-hover);
+    color: white;
+    box-shadow: 0 0 0 0.20rem rgba(0, 237, 99, 0.336);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+.btn-glass-submit {
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.btn-glass-submit:hover {
+    background: var(--color-green);
+    color: #001e2b;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
+    border-radius: 15px;
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+}
+
+/* sign up */
+.registration-section {
+    min-height: 90vh;
+    padding: 60px 0;
+    background-image:
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+.registration-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-control::file-selector-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.form-control:hover::file-selector-button {
+    background-color: var(--color-green);
+    color: var(--color-navy);
+}
+
+.form-control[type="file"]::-webkit-file-upload-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-control[type="file"]:hover::-webkit-file-upload-button {
+    background-color: var(--color-green);
+    color: var(--color-navy);
+}
+
+.form-check-input:checked {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.form-check-input {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.glass-select {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.glass-select:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #00ed64;
+    box-shadow: 0 0 0 0.25rem rgba(0, 237, 100, 0.15);
+    color: white;
+}
+
+.glass-select option {
+    background-color: #03580369;
+    color: white;
+}
+/* about */
+#about {
+    background-image:
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.3);
+    content: "/";
+}
+
+.glass-card {
+    background: rgba(0, 56, 23, 0.068);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00edff, #00e676);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.image-wrapper {
+    background: rgba(0, 237, 100, 0.05);
+    transition: transform 0.3s ease;
+}
+.image-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: white;
+}
+
+/* Contact  */
+#contact {
+    background-image:
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: #00121a 0px 0px 20px;
+}
+
+.map-container {
+    flex-grow: 1;
+    min-height: 350px;
+}
+
+.breadcrumb-item a {
+    transition: color 0.3s ease;
+}
+.breadcrumb-item a:hover {
+    color: #00ed64 !important;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: #00ed64 !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 237, 100, 0.15) !important;
+    color: white !important;
+}
+
+/* dashboard */
+/* Sidebar Styling */
+.sidebar {
+    background-color: var(--color-navy);
+}
+
+.nav-link {
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #00ed64 !important;
+}
+
+.active-link {
+    background-color: rgba(0, 237, 100, 0.1);
+    color: #00ed64 !important;
+    font-weight: 600;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+}
+
+/* for profile page */
+.profile-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #001e2b;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* form Styles */
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-color: #00ed64 !important;
+    color: white !important;
+    box-shadow: 0 0 10px rgba(0, 237, 100, 0.2);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border-radius: 20px !important;
+}
+
+#profile-container {
+    background-image:
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+/* ── Dashboard Stat Cards ───────────────────────── */
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 237, 100, 0.12);
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.stat-icon-box {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    flex-shrink: 0;
+}
+
+.stat-icon-recipe {
+    background: rgba(0, 237, 255, 0.1);
+    color: #00edff;
+}
+
+.stat-icon-status {
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+}
+
+/* ── Chart Containers ───────────────────────────── */
+.chart-container {
+    min-height: 320px;
+}
+
+.chart-wrapper {
+    height: 260px;
+    position: relative;
+}
+
+/* ── Entrance animation ─────────────────────────── */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card,
+.chart-container {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.stat-card:nth-child(2) { animation-delay: 0.08s; }
+.stat-card:nth-child(3) { animation-delay: 0.16s; }
+.chart-container       { animation-delay: 0.22s; }
+
+/* ── Users Management ───────────────────────────── */
+
+/* Glass-themed modal */
+.glass-modal {
+    background: rgba(0, 30, 43, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px !important;
+}
+
+.glass-modal .modal-header,
+.glass-modal .modal-footer {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Green action button */
+.btn-glass-green {
+    background: rgba(0, 237, 100, 0.12);
+    color: #00ed64;
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.btn-glass-green:hover {
+    background: #00ed64;
+    color: #001e2b;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.35);
+}
+
+/* Info-themed button for edit */
+.btn-glass-info {
+    background: rgba(0, 237, 255, 0.12);
+    color: #00edff;
+    border: 1px solid rgba(0, 237, 255, 0.3);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.btn-glass-info:hover {
+    background: #00edff;
+    color: #001e2b;
+    box-shadow: 0 0 20px rgba(0, 237, 255, 0.35);
+}
+
+/* User avatar in table rows */
+.user-avatar-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 237, 100, 0.1);
+    color: #00ed64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* Table row hover glow */
+#users-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+#users-table tbody tr:hover {
+    background: rgba(0, 237, 100, 0.04) !important;
+}
+
+/* Action buttons in table */
+#users-table .btn-outline-info {
+    color: #00edff;
+    transition: all 0.2s ease;
+}
+#users-table .btn-outline-info:hover {
+    background: rgba(0, 237, 255, 0.15);
+    color: #00edff;
+}
+
+#users-table .btn-outline-danger {
+    color: #ff6b6b;
+    transition: all 0.2s ease;
+}
+#users-table .btn-outline-danger:hover {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+}
+
+/* Delete confirmation icon */
+.delete-icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 107, 107, 0.12);
+    color: #ff6b6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Toast Notifications ────────────────────────── */
+.toast-success {
+    background: rgba(0, 30, 43, 0.95);
+    backdrop-filter: blur(15px);
+    border-left: 4px solid #00ed64;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.toast-error {
+    background: rgba(0, 30, 43, 0.95);
+    backdrop-filter: blur(15px);
+    border-left: 4px solid #ff6b6b;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Toast slide-in animation */
+.toast.show {
+    animation: slideInRight 0.4s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ── Recipes Management ─────────────────────────── */
+
+/* Recipe avatar in table rows */
+.recipe-avatar-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 237, 255, 0.1);
+    color: #00edff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* Table row hover glow */
+#recipes-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+#recipes-table tbody tr:hover {
+    background: rgba(0, 237, 255, 0.04) !important;
+}
+
+/* Action buttons in recipes table */
+#recipes-table .btn-outline-info {
+    color: #00edff;
+    transition: all 0.2s ease;
+}
+#recipes-table .btn-outline-info:hover {
+    background: rgba(0, 237, 255, 0.15);
+    color: #00edff;
+}
+
+#recipes-table .btn-outline-warning {
+    color: #ffc107;
+    transition: all 0.2s ease;
+}
+#recipes-table .btn-outline-warning:hover {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+#recipes-table .btn-outline-danger {
+    color: #ff6b6b;
+    transition: all 0.2s ease;
+}
+#recipes-table .btn-outline-danger:hover {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+}
+
+/* Warning-themed button for recipe edit */
+.btn-glass-warning {
+    background: rgba(255, 193, 7, 0.12);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.btn-glass-warning:hover {
+    background: #ffc107;
+    color: #001e2b;
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.35);
+}
+
+/* ── Profile Page ───────────────────────────────── */
+
+/* Profile picture with hover overlay */
+.profile-picture-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid rgba(0, 237, 100, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.profile-picture-wrapper:hover {
+    border-color: #00ed64;
+}
+
+.profile-picture-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-picture-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 30, 43, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00ed64;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-picture-wrapper:hover .profile-picture-overlay {
+    opacity: 1;
+}
+
+/* Info cards inside profile */
+.profile-info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease;
+}
+
+.profile-info-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
