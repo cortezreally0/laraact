@@ -94,7 +94,7 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ secure_url('users.store') }}" method="POST">
+            <form action="{{ route('users.store') }}" method="POST">
                 @csrf
                 <div class="modal-body">
                     <div class="mb-3">
@@ -138,7 +138,7 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ secure_url('users.update', $user->id) }}" method="POST">
+            <form action="{{ route('users.update', $user->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
@@ -184,7 +184,7 @@
             </div>
             <div class="modal-footer border-secondary border-opacity-25 justify-content-center">
                 <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-                <form action="{{ secure_url('users.destroy', $user->id) }}" method="POST">
+                <form action="{{ route('users.destroy', $user->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-sm btn-danger px-4">

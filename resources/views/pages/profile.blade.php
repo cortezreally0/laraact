@@ -11,7 +11,7 @@
                 <h1 class="h2 text-white mb-1">My Profile</h1>
                 <p class="text-secondary small mb-0">Manage your account information</p>
             </div>
-            <a href="{{ secure_url('dashboard') }}" class="btn btn-sm btn-outline-secondary">
+            <a href="{{ route('dashboard') }}" class="btn btn-sm btn-outline-secondary">
                 <i class="bi bi-arrow-left me-1"></i> Back to Dashboard
             </a>
         </div>
@@ -22,7 +22,7 @@
                 <div class="glass-card rounded-4 p-4 border border-secondary border-opacity-25 text-center">
                     <!-- Profile Picture -->
                     <div class="profile-picture-wrapper mx-auto mb-3">
-                        <img src="{{ secure_asset('uploads/' . ($user->profile_picture_path ?: 'default.webp')) }}"
+                        <img src="{{ asset('uploads/' . ($user->profile_picture_path ?: 'default.webp')) }}"
                              alt="Profile Picture"
                              class="profile-picture-img"
                              id="profilePreview">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-                    <form action="{{ secure_url('profile.update') }}" method="POST">
+                    <form action="{{ route('profile.update') }}" method="POST">
                         @csrf
                         @method('PUT')
 
@@ -172,11 +172,11 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ secure_url('profile.picture') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('profile.picture') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body text-center">
                     <div class="profile-picture-wrapper mx-auto mb-3" style="width: 150px; height: 150px;">
-                        <img src="{{ secure_asset('uploads/' . ($user->profile_picture_path ?: 'default.webp')) }}"
+                        <img src="{{ asset('uploads/' . ($user->profile_picture_path ?: 'default.webp')) }}"
                              alt="Current Picture"
                              class="profile-picture-img"
                              id="modalPreview">
