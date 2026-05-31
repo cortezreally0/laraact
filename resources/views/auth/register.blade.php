@@ -11,7 +11,7 @@
                         <p class="text-secondary small">Join the BSIT community</p>
                     </div>
 
-                    <form action="{{ route('register.post') }}" method="POST" class="needs-validation" novalidate>
+                    <form action="{{ secure_url('register.post') }}" method="POST" class="needs-validation" novalidate>
                         @csrf
                         @if ($errors->any())
                             <div class="alert alert-danger">

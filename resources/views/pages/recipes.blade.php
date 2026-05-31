@@ -110,7 +110,7 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('recipes.store') }}" method="POST">
+            <form action="{{ secure_url('recipes.store') }}" method="POST">
                 @csrf
                 <div class="modal-body">
                     <div class="row">
@@ -209,7 +209,7 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('recipes.update', $recipe->id) }}" method="POST">
+            <form action="{{ secure_url('recipes.update', $recipe->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
@@ -272,7 +272,7 @@
             </div>
             <div class="modal-footer border-secondary border-opacity-25 justify-content-center">
                 <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-                <form action="{{ route('recipes.destroy', $recipe->id) }}" method="POST">
+                <form action="{{ secure_url('recipes.destroy', $recipe->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-sm btn-danger px-4">

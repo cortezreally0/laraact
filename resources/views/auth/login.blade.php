@@ -16,7 +16,7 @@ Login
                         <p class="text-secondary small">Enter your credentials to access Dashboard</p>
                     </div>
 
-                    <form action="{{ route('login.post') }}" class="needs-validation" method="POST" novalidate>
+                    <form action="{{ secure_url('login.post') }}" class="needs-validation" method="POST" novalidate>
                         @csrf
                         @if ($errors->any())
                             <div class="alert alert-danger">
